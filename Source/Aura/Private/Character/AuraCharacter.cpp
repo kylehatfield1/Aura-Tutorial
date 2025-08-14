@@ -32,6 +32,8 @@ void AAuraCharacter::BeginPlay()
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationRoll = false;
 	bUseControllerRotationYaw = false;
+	UAuraAttributeSet* AuraAttributeSet = Cast<UAuraAttributeSet>(AttributeSet);
+	UE_LOG(LogTemp, Warning, TEXT("Health: %f"), AuraAttributeSet->GetHealth());
 }
 
 void AAuraCharacter::PossessedBy(AController* NewController)
